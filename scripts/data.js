@@ -1,4 +1,6 @@
-var people = [
+console.log( 'in data.js');
+
+let people = [
   {
     name: 'Dev',
     githubUsername: 'devjanaprime'
@@ -40,3 +42,4 @@ var people = [
     githubUsername: 'gabri1463'
   },
 ];
+
