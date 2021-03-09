@@ -16,8 +16,9 @@ function displayToDOM( array ) {
   for (let i = 0; i < array.length; i++) {
     // append each person's profile picture to the DOM
     $( '#image-blocks' ).append(`
-    <div>
+    <div class = "parent" >
     <img class="githubImages" data-name=${array[i].name} src="https://github.com/${array[i].githubUsername}.png?size=250" alt="Profile image of ${array[i].name}">
+    <span class="checkmark hidden"></span>
     </div>
     `);
   } // end for
@@ -41,14 +42,21 @@ function randomNumber(min, max){
 
 function foundRightImage() {
   console.log( 'in foundRight' );
-  console.log($(this).data( 'name'));
+  // console.log($(this).data( 'name'));
+  // console.log($( this ).position());
+  let pos = $( this ).position();
+  console.log(pos.top);
+  console.log(pos.left);
+
+
   if( $( this ).data( 'name' ) === contestant) {
-    alert( `Success! That is ${$( this ).data( 'name' )}`)
+    alert( `Success! That is ${$( this ).data( 'name' )}`);
+    $( 'main' ).append(`<img class="checkbox" style="height:100px;width:100px;position:absolute;top:${pos.top + 160}px;left:${pos.left + 20}px" id="checkmark" src="./images/Check-mark-1.jpeg" alt="Green Check Mark">`);
+    setTimeout(function(){$( '.checkbox').addClass('hidden')}, 2000);
   }
   else {
     alert( `Do Better!`)
   }
-
   
 } // end foundRightImage
 

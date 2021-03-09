@@ -2,3 +2,17 @@
     display: flex;
     flex-wrap: wrap;
 }
+#image-blocks {
+  position: relative;
+}
+.githubImages {
+  position: relative;
+}
+.checkmark {
+  border: 1px solid black;
+}
+
+.hidden {
+  display: none;
+}
+
