@@ -1,15 +1,10 @@
 #image-blocks {
     display: flex;
     flex-wrap: wrap;
-}
-#image-blocks {
-  position: relative;
+      position: relative;
 }
 .githubImages {
   position: relative;
-}
-.checkmark {
-  border: 1px solid black;
 }
 
 .hidden {
